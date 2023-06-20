@@ -13,11 +13,14 @@ formElement.addEventListener("submit", (event) => {
     let rateCHF = 4.56;
 
     switch (currency) {
-        case "USD": result = amount / rateUSD;
+        case "USD":
+            result = amount / rateUSD;
             break;
-        case "EUR": result = amount / rateEUR;
+        case "EUR":
+            result = amount / rateEUR;
             break;
-        case "CHF": result = amount / rateCHF;
+        case "CHF":
+            result = amount / rateCHF;
             break;
     };
 
