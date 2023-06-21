@@ -14,7 +14,7 @@
             case "CHF":
                 return amount / rateCHF;
         };
-    }
+    };
 
     const updateResultText = (amount, result, currency) => {
         let resultElement = document.querySelector(".js-result");
