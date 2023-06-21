@@ -22,8 +22,6 @@
         resultElement.textContent = `Za ${amount} PLN dostaniesz ${result.toFixed(2)} ${currency} `;
     };
 
-    let formElement = document.querySelector(".js-form");
-
     const onFormSubmit = (event) => {
         event.preventDefault();
 
@@ -33,10 +31,15 @@
         const amount = +amountElement.value;
         const currency = currencyElement.value;
 
-        calculateResult(currency, amount);
+        const result = calculateResult(currency, amount);
+        updateResultText(amount, result, currency);
     };
 
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
 
+        formElement.addEventListener("submit", onFormSubmit);
+    };
 
-    formElement.addEventListener("submit", onFormSubmit);
+    init();
 }
