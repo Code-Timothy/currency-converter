@@ -17,3 +17,4 @@ Demo you can see [Here!](https://code-timothy.github.io/currency-converter/)
 * HTML
 * CSS
 * JAVASCRIPT ES6+
+* BEM
