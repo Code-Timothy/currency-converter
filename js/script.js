@@ -3,6 +3,7 @@
         const rateUSD = 4.07;
         const rateEUR = 4.45;
         const rateCHF = 4.56;
+        const rateGBP = 5.18;
 
         switch (currency) {
             case "USD":
@@ -13,6 +14,8 @@
 
             case "CHF":
                 return amount / rateCHF;
+            case "GBP":
+                return amount / rateGBP;
         };
     };
 
