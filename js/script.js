@@ -1,9 +1,9 @@
 {
     const calculateResult = (currency, amount) => {
-        const rateUSD = 4.07;
-        const rateEUR = 4.45;
-        const rateCHF = 4.56;
-        const rateGBP = 5.18;
+        const rateUSD = 4.06;
+        const rateEUR = 4.46;
+        const rateCHF = 4.55;
+        const rateGBP = 5.15;
 
         switch (currency) {
             case "USD":
