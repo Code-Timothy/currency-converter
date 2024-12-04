@@ -3,29 +3,34 @@ const amountElement = document.querySelector(".js-amount");
 const currencyElement = document.querySelector(".js-currency");
 const resultElement = document.querySelector(".js-result");
 
+const calculateResult = (currency, amount) => {
+    switch (currency) {
+        case 'USD':
+            return amount / 4.07;
+
+        case "GBP":
+            return amount / 5.17;
+
+        case "EUR":
+            return amount / 4.29;
+
+        case "BTC":
+            return amount / 389299;
+
+        default:
+            alert("Something went wrong. Try Again.");
+    }
+};
+
 formElement.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const amount = +amountElement.value;
     const currency = currencyElement.value;
-    let result;
 
-    switch (currency) {
-        case 'USD':
-            result = amount / 4.07;
-            break;
-        case "GBP":
-            result = amount / 5.17;
-            break;
-        case "EUR":
-            result = amount / 4.29;
-            break;
-        case "BTC":
-            result = amount / 389299;
-            break;
-        default:
-            alert("Something went wrong. Try Again.");
-    }
+    const result = calculateResult(currency, amount);
+
+
 
     if (currency === "BTC") {
         resultElement.innerText = `${result} ${currency}`;
