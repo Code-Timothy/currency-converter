@@ -1,6 +1,4 @@
 {
-    const formElement = document.querySelector(".js-form");
-
     const calculateResult = (currency, amount) => {
 
         const rateEUR = 4.29;
@@ -38,7 +36,7 @@
 
     };
 
-    const init = (event) => {
+    const onFormSubmit = (event) => {
         event.preventDefault();
 
         const amountElement = document.querySelector(".js-amount");
@@ -49,8 +47,12 @@
 
         const result = calculateResult(currency, amount);
         showResultText(currency, result);
-
     };
 
-    formElement.addEventListener("submit", init);
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+        formElement.addEventListener("submit", onFormSubmit);
+    };
+
+    init();
 }
