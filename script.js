@@ -4,18 +4,24 @@ const currencyElement = document.querySelector(".js-currency");
 const resultElement = document.querySelector(".js-result");
 
 const calculateResult = (currency, amount) => {
+
+    const rateEUR = 4.29;
+    const rateUSD = 4.07;
+    const rateGBP = 5.17;
+    const rateBTC = 389299;
+
     switch (currency) {
         case 'USD':
-            return amount / 4.07;
+            return amount / rateUSD;
 
         case "GBP":
-            return amount / 5.17;
+            return amount / rateGBP;
 
         case "EUR":
-            return amount / 4.29;
+            return amount / rateEUR;
 
         case "BTC":
-            return amount / 389299;
+            return amount / rateBTC;
 
         default:
             alert("Something went wrong. Try Again.");
