@@ -22,6 +22,14 @@ const calculateResult = (currency, amount) => {
     }
 };
 
+const showResultText = (currency, result) => {
+    if (currency === "BTC") {
+        resultElement.innerText = `${result} ${currency}`;
+    } else {
+        resultElement.innerText = `${result.toFixed(2)} ${currency}`;
+    }
+};
+
 formElement.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -29,13 +37,5 @@ formElement.addEventListener("submit", (event) => {
     const currency = currencyElement.value;
 
     const result = calculateResult(currency, amount);
-
-
-
-    if (currency === "BTC") {
-        resultElement.innerText = `${result} ${currency}`;
-    } else {
-        resultElement.innerText = `${result.toFixed(2)} ${currency}`;
-    }
-
+    showResultText(currency, result);
 });
