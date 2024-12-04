@@ -10,7 +10,7 @@ Demo you can see [here](https://code-timothy.github.io/currency-converter/)
 
 ## Preview 👓
 
-![howtouse](./howtousecc.gif)
+![howtouse](./images/howtousecc.gif)
 
 ## Technologies used 📖
 - HTML
