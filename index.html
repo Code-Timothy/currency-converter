@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+          integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="main.css">
+     <link rel="stylesheet" href="form.css">
+     <link rel="stylesheet" href="header.css">
+     <link rel="stylesheet" href="information.css">
+     <script defer src="script.js"></script>
+     <title>RateMate Calc</title>
+</head>
+
+<body>
+     <main class="main">
+          <header class="header">
+               <h1 class="header__header">RentMate Calc</h1>
+               <div class="header__logoContainer">
+                    <img class="header__logo"
+                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/640px-Mastercard_2019_logo.svg.png"
+                         alt="logo">
+                    <span>RateMate Calc</span>
+               </div>
+          </header>
+          <form class="form js-form">
+               <p class="form__paragraph">
+                    <label>
+                         <span class="form__labelText">Enter the amount</span>
+                         <input class="form__input js-amount" type="number" min="1" step="0.01"
+                              placeholder="Enter the amount in PLN" required>
+                    </label>
+               </p>
+               <p class="form__paragraph">
+                    <label>
+                         <span class="form__labelText">Select currency</span>
+                         <select class="form__input js-currency" name="currency">
+                              <option class="form__option" value="USD">Dolar Amerykański</option>
+                              <option class="form__option" value="GBP">Funt Brytyjski</option>
+                              <option class="form__option" value="EUR" selected>Euro</option>
+                              <option class="form__option" value="BTC">Bitcoin</option>
+                         </select>
+                    </label>
+               </p>
+               <p class="form__paragraph">
+                    You will get: <span class="form__result js-result"></span>
+               </p>
+               <p class="form__paragraph">
+                    <button class="form__button">CONVERTE</button>
+               </p>
+          </form>
+          <div class="information">
+               <p class="information__paragraph">**** **** **** 1234</p>
+               <p class="information__paragraph information__paragraph--smaller">
+                    Exchange rates come from the European Central Bank website
+               </p>
+          </div>
+     </main>
+</body>
+
+</html>

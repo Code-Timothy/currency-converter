@@ -1,0 +1,8 @@
+.main {
+    background-color: #0093E9;
+    background: linear-gradient(120deg, #0093E9 0%, #80D0C7 100%);
+    padding: 10px;
+    max-width: 1000px;
+    margin: 50px auto;
+    border-radius: 10px;
+}

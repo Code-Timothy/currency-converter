@@ -1,0 +1,17 @@
+.information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.information__paragraph {
+    text-align: center;
+    font-size: 24px;
+    margin: 10px;
+}
+
+.information__paragraph--smaller {
+    font-weight: 300;
+    font-size: 12px;
+}
