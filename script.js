@@ -22,7 +22,6 @@
             default:
                 alert("Something went wrong. Try Again.");
         }
-
     };
 
     const showResultText = (currency, result) => {
@@ -33,7 +32,6 @@
         } else {
             resultElement.innerText = `${result.toFixed(2)} ${currency}`;
         }
-
     };
 
     const onFormSubmit = (event) => {
@@ -51,6 +49,7 @@
 
     const init = () => {
         const formElement = document.querySelector(".js-form");
+
         formElement.addEventListener("submit", onFormSubmit);
     };
 
