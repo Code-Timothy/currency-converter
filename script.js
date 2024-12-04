@@ -1,47 +1,56 @@
-const formElement = document.querySelector(".js-form");
-const amountElement = document.querySelector(".js-amount");
-const currencyElement = document.querySelector(".js-currency");
-const resultElement = document.querySelector(".js-result");
+{
+    const formElement = document.querySelector(".js-form");
 
-const calculateResult = (currency, amount) => {
+    const calculateResult = (currency, amount) => {
 
-    const rateEUR = 4.29;
-    const rateUSD = 4.07;
-    const rateGBP = 5.17;
-    const rateBTC = 389299;
+        const rateEUR = 4.29;
+        const rateUSD = 4.07;
+        const rateGBP = 5.17;
+        const rateBTC = 389299;
 
-    switch (currency) {
-        case 'USD':
-            return amount / rateUSD;
+        switch (currency) {
+            case 'USD':
+                return amount / rateUSD;
 
-        case "GBP":
-            return amount / rateGBP;
+            case "GBP":
+                return amount / rateGBP;
 
-        case "EUR":
-            return amount / rateEUR;
+            case "EUR":
+                return amount / rateEUR;
 
-        case "BTC":
-            return amount / rateBTC;
+            case "BTC":
+                return amount / rateBTC;
 
-        default:
-            alert("Something went wrong. Try Again.");
-    }
-};
+            default:
+                alert("Something went wrong. Try Again.");
+        }
 
-const showResultText = (currency, result) => {
-    if (currency === "BTC") {
-        resultElement.innerText = `${result} ${currency}`;
-    } else {
-        resultElement.innerText = `${result.toFixed(2)} ${currency}`;
-    }
-};
+    };
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
+    const showResultText = (currency, result) => {
+        const resultElement = document.querySelector(".js-result");
 
-    const amount = +amountElement.value;
-    const currency = currencyElement.value;
+        if (currency === "BTC") {
+            resultElement.innerText = `${result} ${currency}`;
+        } else {
+            resultElement.innerText = `${result.toFixed(2)} ${currency}`;
+        }
 
-    const result = calculateResult(currency, amount);
-    showResultText(currency, result);
-});
+    };
+
+    const init = (event) => {
+        event.preventDefault();
+
+        const amountElement = document.querySelector(".js-amount");
+        const currencyElement = document.querySelector(".js-currency");
+
+        const amount = +amountElement.value;
+        const currency = currencyElement.value;
+
+        const result = calculateResult(currency, amount);
+        showResultText(currency, result);
+
+    };
+
+    formElement.addEventListener("submit", init);
+}
